@@ -6,7 +6,7 @@ use std::io::stdin;
 use owo_colors::OwoColorize;
 
 fn main() {
-    println!("------某音ゲーの成績を某音ゲー風にするやつ version0.00------");
+    println!("------某音ゲーの成績を某音ゲー風にするやつ version0.02------");
     println!(" ");
     calc_main();
     loop{
@@ -72,6 +72,15 @@ fn calc_main(){
     let girscore_acc = (((perfect * 1.0 + great * 0.73 + good * 0.45) / all_notes) * 10000.0).round() / 100.0;
     let pafescore_acc = ((perfect / all_notes) * 10000.0).round() / 100.0;
 
+    let mut pro_clear = "false";
+    if bad * 50.0 + miss * 80.0 < 1000.0{
+        pro_clear = "True";
+    }
+    let mut gir_clear = "false";
+    if bad * 60.0 + miss * 100.0 < 1000.0{
+        gir_clear = "True";
+    }
+
     if phig_score >= 700000{
         class_alpha = " C ";
         if phig_score >= 820000{
@@ -133,6 +142,9 @@ fn calc_main(){
     }else{
         println!("  evaluation : {}", class_alpha);
     }
+    println!(" clearT/F @p : {}", pro_clear);
+    println!(" clearT/F @g : {}", gir_clear);
+
     println!(" ");
     println!(" ");
     println!(" ");
