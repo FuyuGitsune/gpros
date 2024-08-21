@@ -142,8 +142,8 @@ fn calc_main(){
     }else{
         println!("  evaluation : {}", class_alpha);
     }
-    println!(" clearT/F @p : {}", pro_clear);
-    println!(" clearT/F @g : {}", gir_clear);
+    println!("  clearTF @p : {}", pro_clear);
+    println!("  clearTF @g : {}", gir_clear);
 
     println!(" ");
     println!(" ");
