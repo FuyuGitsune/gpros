@@ -120,8 +120,8 @@ fn calc_main(){
     }else{
         println!("  score      :  {} ", phig_score);
     }
-    println!("  acc @prsk  :  {}%", proscore_acc);
     println!("  acc @grpa  :  {}%", girscore_acc);
+    println!("  acc @prsk  :  {}%", proscore_acc);
     println!("  acc @phig  :  {}%", acc);
     println!("  acc @pafe  :  {}%", pafescore_acc);
     if all_notes == perfect + great{
