@@ -68,6 +68,10 @@ fn calc_main(){
     let acc = (((perfect * 1.0 + great * 0.65) / all_notes) * 10000.0).round() / 100.0;
     let mut class_alpha = " F ";
 
+    let proscore_acc = (((perfect * 1.0 + great * 0.7 + good * 0.5) / all_notes) * 10000.0).round() / 100.0;
+    let girscore_acc = (((perfect * 1.0 + great * 0.73 + good * 0.45) / all_notes) * 10000.0).round() / 100.0;
+    let pafescore_acc = ((perfect / all_notes) * 10000.0).round() / 100.0;
+
     if phig_score >= 700000{
         class_alpha = " C ";
         if phig_score >= 820000{
@@ -116,7 +120,10 @@ fn calc_main(){
     }else{
         println!("  score      :  {} ", phig_score);
     }
-    println!("  acc        :  {}%", acc);
+    println!("  acc @prsk  :  {}%", proscore_acc);
+    println!("  acc @grpa  :  {}%", girscore_acc);
+    println!("  acc @phig  :  {}%", acc);
+    println!("  acc @pafe  :  {}%", pafescore_acc);
     if all_notes == perfect + great{
         if all_notes == perfect{
             println!("  evaluation : {}", " φ ".yellow().on_white())
