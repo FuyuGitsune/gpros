@@ -70,6 +70,7 @@ fn calc_main(){
 
     let proscore_acc = (((perfect * 1.0 + great * 0.7 + good * 0.5) / all_notes) * 10000.0).round() / 100.0;
     let girscore_acc = (((perfect * 1.0 + great * 0.73 + good * 0.45) / all_notes) * 10000.0).round() / 100.0;
+    let milscore_acc = (((perfect * 1.0 + great * 0.5) / all_notes) * 10000.0).round() / 100.0;
     let pafescore_acc = ((perfect / all_notes) * 10000.0).round() / 100.0;
     let combscore_acc = ((combo / all_notes) * 10000.0).round() / 100.0;
 
@@ -133,6 +134,7 @@ fn calc_main(){
     println!("  acc @grpa  :  {}%", girscore_acc);
     println!("  acc @prsk  :  {}%", proscore_acc);
     println!("  acc @phig  :  {}%", acc);
+    println!("  acc @mili  :  {}%", milscore_acc);
     println!("  acc @pafe  :  {}%", pafescore_acc);
     println!("  acc @comb  :  {}%", combscore_acc);
     if all_notes == perfect + great{
