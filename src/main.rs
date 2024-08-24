@@ -65,14 +65,14 @@ fn calc_main(){
         return;
     }
     let phig_score = ((perfect * 1.0 + great * 0.65) / all_notes * 900000.0 + combo / all_notes * 100000.0).round() as u32;
-    let acc = (((perfect * 1.0 + great * 0.65) / all_notes) * 10000.0).round() / 100.0;
+    let acc = (((perfect * 1.0 + great * 0.65) / all_notes) * 100000000.0).round() / 1000000.0;
     let mut class_alpha = " F ";
 
-    let proscore_acc = (((perfect * 1.0 + great * 0.7 + good * 0.5) / all_notes) * 10000.0).round() / 100.0;
-    let girscore_acc = (((perfect * 1.0 + great * 0.73 + good * 0.45) / all_notes) * 10000.0).round() / 100.0;
-    let milscore_acc = (((perfect * 1.0 + great * 0.5) / all_notes) * 10000.0).round() / 100.0;
-    let pafescore_acc = ((perfect / all_notes) * 10000.0).round() / 100.0;
-    let combscore_acc = ((combo / all_notes) * 10000.0).round() / 100.0;
+    let proscore_acc = (((perfect * 1.0 + great * 0.7 + good * 0.5) / all_notes) * 100000000.0).round() / 1000000.0;
+    let girscore_acc = (((perfect * 1.0 + great * 0.73 + good * 0.45) / all_notes) * 100000000.0).round() / 1000000.0;
+    let milscore_acc = (((perfect * 1.0 + great * 0.5) / all_notes) * 100000000.0).round() / 1000000.0;
+    let pafescore_acc = ((perfect / all_notes) * 100000000.0).round() / 1000000.0;
+    let combscore_acc = ((combo / all_notes) * 100000000.0).round() / 1000000.0;
 
     let mut pro_clear = "false";
     if bad * 50.0 + miss * 80.0 < 1000.0{
