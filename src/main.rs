@@ -6,7 +6,7 @@ use std::io::stdin;
 use owo_colors::OwoColorize;
 
 fn main() {
-    println!("------某音ゲーの成績を某音ゲー風にするやつ version0.03------");
+    println!("------某音ゲーの成績を某音ゲー風にするやつ version0.04------");
     println!(" ");
     calc_main();
     loop{
