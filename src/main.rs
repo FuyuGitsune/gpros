@@ -78,10 +78,12 @@ fn calc_main(){
     if bad * 50.0 + miss * 80.0 < 1000.0{
         pro_clear = "True";
     }
+    let pro_pm = 1000.0 - (bad * 50.0 + miss * 80.0);
     let mut gir_clear = "false";
     if bad * 60.0 + miss * 100.0 < 1000.0{
         gir_clear = "True";
     }
+    let gir_pm = 1000.0 - (bad * 60.0 + miss * 100.0);
 
     if phig_score >= 700000{
         class_alpha = " C ";
@@ -101,7 +103,7 @@ fn calc_main(){
 
     //ここに判定変換。
 
-    println!(" -------Your score-------");
+    println!(" ----------Your score----------");
     println!("  perfect    :  {}", perfect as u32);
     println!("  great      :  {}", great as u32);
     println!("  good       :  {}", good as u32);
@@ -115,18 +117,18 @@ fn calc_main(){
             if phig_score >= 950000{
                 if phig_score >= 980000{
                     if phig_score == 1000000{
-                        println!("  score      : {}{}{}", " ".black().on_white(), phig_score.black().on_white(), " ".black().on_white());
+                        println!("  score      :  {}{}{}", " ".black().on_white(), phig_score.black().on_white(), " ".black().on_white());
                     }else{
-                        println!("  score      : {}{}{}", " ".white().on_yellow(), phig_score.white().on_yellow(), " ".white().on_yellow());
+                        println!("  score      :  {}{}{}", " ".white().on_yellow(), phig_score.white().on_yellow(), " ".white().on_yellow());
                     }
                 }else{
-                    println!("  score      : {}{}{}", " ".white().on_red(), phig_score.white().on_red(), " ".white().on_red());
+                    println!("  score      :  {}{}{}", " ".white().on_red(), phig_score.white().on_red(), " ".white().on_red());
                 }
             }else{
-                println!("  score      : {}{}{}", " ".white().on_blue(), phig_score.white().on_blue(), " ".white().on_blue());
+                println!("  score      :  {}{}{}", " ".white().on_blue(), phig_score.white().on_blue(), " ".white().on_blue());
             }
         }else{
-            println!("  score      : {}{}{}", " ".white().on_green(), phig_score.white().on_green(), " ".white().on_green());
+            println!("  score      :  {}{}{}", " ".white().on_green(), phig_score.white().on_green(), " ".white().on_green());
         }
     }else{
         println!("  score      :  {} ", phig_score);
@@ -139,15 +141,15 @@ fn calc_main(){
     println!("  acc @comb  :  {}%", combscore_acc);
     if all_notes == perfect + great{
         if all_notes == perfect{
-            println!("  evaluation : {}", " φ ".yellow().on_white())
+            println!("  evaluation :  {}", " φ ".yellow().on_white())
         }else{
-            println!("  evaluation : {}", " V ".blue().on_white())
+            println!("  evaluation :  {}", " V ".blue().on_white())
         }
     }else{
         println!("  evaluation : {}", class_alpha);
     }
-    println!("  clearTF @p : {}", pro_clear);
-    println!("  clearTF @g : {}", gir_clear);
+    println!("  clearTF @p :  {} (HP{})", pro_clear, pro_pm);
+    println!("  clearTF @g :  {} (HP{})", gir_clear, gir_pm);
 
     println!(" ");
     println!(" ");
